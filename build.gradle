@@ -1,0 +1,30 @@
+group 'drareeg'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+//sourceSets {
+//main {
+//
+//}
+//
+//}
+
+test {
+    include '**/*Test.class'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    //pre 2007
+    compile group: 'org.apache.poi', name: 'poi', version: '3.9'
+    //post 2007
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.9'
+   // testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M2")
+}
